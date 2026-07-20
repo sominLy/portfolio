@@ -8,152 +8,200 @@
 <title>소민 · 만드는 기획자 포트폴리오</title>
 <style>
   :root{
-    --paper:#FBFAF7; --ink:#17171E; --muted:#6C6C77; --faint:#9A9AA3;
-    --line:#E7E4DD; --card:#FFFFFF; --cardsoft:#F5F2EC;
-    --coral:#FF5A2C; --coral-deep:#E8410F; --coral-soft:#FFEDE4; --coral-line:#FFC9B4;
-    --good:#1E9E6A; --shadow:0 1px 2px rgba(23,23,30,.04),0 8px 24px rgba(23,23,30,.06);
+    --paper:#FBF9F5; --ink:#16161C; --muted:#65656F; --faint:#9C9AA1;
+    --line:#E9E5DD; --card:#FFFFFF; --cardsoft:#F4F1EA;
+    --coral:#FF5A2C; --coral-deep:#D63A0C; --coral-soft:#FFEBE1; --coral-line:#FFCDB8;
+    --ink-deep:#131218; --ink-card:#1E1D25; --on-ink:#F6F4EF; --on-ink-mut:rgba(246,244,239,.62);
+    --good:#1E9E6A;
+    --shadow:0 1px 2px rgba(22,22,28,.04),0 10px 30px -8px rgba(22,22,28,.10);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:"Pretendard","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --paper:#141319; --ink:#F4F2EE; --muted:#A2A0AB; --faint:#6E6C78;
-      --line:#2A2934; --card:#1D1C24; --cardsoft:#201F28;
-      --coral:#FF6F45; --coral-deep:#FF8A63; --coral-soft:#2A1B15; --coral-line:#4A3125;
-      --good:#3FBE86; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+      --paper:#131217; --ink:#F3F1ED; --muted:#9E9CA6; --faint:#6C6A75;
+      --line:#292832; --card:#1C1B22; --cardsoft:#201F27;
+      --coral:#FF7047; --coral-deep:#FF8E68; --coral-soft:#2B1B14; --coral-line:#48301F;
+      --ink-deep:#0E0D12; --ink-card:#1A1920; --on-ink:#F3F1ED; --on-ink-mut:rgba(243,241,237,.6);
+      --good:#3FBE86;
+      --shadow:0 1px 2px rgba(0,0,0,.35),0 14px 34px -10px rgba(0,0,0,.5);
     }
   }
   :root[data-theme="light"]{
-    --paper:#FBFAF7; --ink:#17171E; --muted:#6C6C77; --faint:#9A9AA3;
-    --line:#E7E4DD; --card:#FFFFFF; --cardsoft:#F5F2EC;
-    --coral:#FF5A2C; --coral-deep:#E8410F; --coral-soft:#FFEDE4; --coral-line:#FFC9B4;
-    --good:#1E9E6A; --shadow:0 1px 2px rgba(23,23,30,.04),0 8px 24px rgba(23,23,30,.06);
+    --paper:#FBF9F5; --ink:#16161C; --muted:#65656F; --faint:#9C9AA1;
+    --line:#E9E5DD; --card:#FFFFFF; --cardsoft:#F4F1EA;
+    --coral:#FF5A2C; --coral-deep:#D63A0C; --coral-soft:#FFEBE1; --coral-line:#FFCDB8;
+    --ink-deep:#131218; --ink-card:#1E1D25; --on-ink:#F6F4EF; --on-ink-mut:rgba(246,244,239,.62);
+    --good:#1E9E6A;
+    --shadow:0 1px 2px rgba(22,22,28,.04),0 10px 30px -8px rgba(22,22,28,.10);
   }
   :root[data-theme="dark"]{
-    --paper:#141319; --ink:#F4F2EE; --muted:#A2A0AB; --faint:#6E6C78;
-    --line:#2A2934; --card:#1D1C24; --cardsoft:#201F28;
-    --coral:#FF6F45; --coral-deep:#FF8A63; --coral-soft:#2A1B15; --coral-line:#4A3125;
-    --good:#3FBE86; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    --paper:#131217; --ink:#F3F1ED; --muted:#9E9CA6; --faint:#6C6A75;
+    --line:#292832; --card:#1C1B22; --cardsoft:#201F27;
+    --coral:#FF7047; --coral-deep:#FF8E68; --coral-soft:#2B1B14; --coral-line:#48301F;
+    --ink-deep:#0E0D12; --ink-card:#1A1920; --on-ink:#F3F1ED; --on-ink-mut:rgba(243,241,237,.6);
+    --good:#3FBE86;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 14px 34px -10px rgba(0,0,0,.5);
   }
 
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Pretendard","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;
-    line-height:1.6; -webkit-font-smoothing:antialiased;
+    font-family:var(--sans); line-height:1.62; -webkit-font-smoothing:antialiased;
     font-feature-settings:"tnum"; font-variant-numeric:tabular-nums;
   }
-  .wrap{max-width:940px; margin:0 auto; padding:0 clamp(20px,5vw,40px);}
-  a{color:inherit;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 clamp(22px,5.5vw,48px);}
   .em{color:var(--coral);}
 
-  /* header */
-  header{padding:clamp(56px,10vw,110px) 0 clamp(30px,5vw,56px);}
-  .eyebrow{font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--coral);}
-  h1{font-size:clamp(38px,7vw,80px); font-weight:900; letter-spacing:-.035em; line-height:1.03; margin:16px 0 0; text-wrap:balance;}
-  .sub{font-size:clamp(17px,2.3vw,23px); color:var(--muted); font-weight:500; margin-top:20px; max-width:40ch;}
-  .meta{display:flex; flex-wrap:wrap; gap:8px 26px; margin-top:30px; font-size:15px; font-weight:600; color:var(--muted);}
-  .meta b{color:var(--ink); font-weight:700;}
-  .meta a{color:var(--coral); text-decoration:none; font-weight:700;}
-  .meta a:hover{text-decoration:underline;}
+  /* ── reveal ── */
+  .rv{opacity:0; transform:translateY(18px);}
+  .rv.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
+  @media (prefers-reduced-motion:reduce){ .rv{opacity:1; transform:none;} }
 
-  /* section heading */
-  .sechead{display:flex; align-items:baseline; gap:14px; margin:clamp(40px,7vw,72px) 0 clamp(18px,3vw,28px); padding-top:26px; border-top:1px solid var(--line);}
-  .sechead .n{font-size:14px; font-weight:800; color:var(--coral); font-variant-numeric:tabular-nums;}
-  .sechead h2{font-size:clamp(22px,3.4vw,32px); font-weight:900; letter-spacing:-.025em; margin:0;}
+  /* ── HERO ── */
+  .hero{background:var(--ink-deep); color:var(--on-ink); position:relative; overflow:hidden;}
+  .hero::after{content:""; position:absolute; right:-14vw; top:-14vw; width:44vw; height:44vw; border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(255,90,44,.30), rgba(255,90,44,0) 62%); pointer-events:none;}
+  .hero .wrap{position:relative; z-index:1; padding:clamp(70px,13vw,150px) clamp(22px,5.5vw,48px) clamp(46px,8vw,86px);}
+  .eyebrow{font-size:12.5px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--coral);
+    display:inline-flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:""; width:26px; height:2px; background:var(--coral); display:inline-block;}
+  .hero h1{font-size:clamp(40px,8.2vw,92px); font-weight:900; letter-spacing:-.04em; line-height:1.0; margin:24px 0 0; text-wrap:balance;}
+  .hero .sub{font-size:clamp(17px,2.3vw,23px); color:var(--on-ink-mut); font-weight:500; margin:26px 0 0; max-width:42ch;}
+  .idline{display:flex; flex-wrap:wrap; gap:10px 12px; margin-top:clamp(34px,5vw,52px);}
+  .idline a{font-size:14px; font-weight:700; text-decoration:none; color:var(--on-ink);
+    border:1px solid rgba(246,244,239,.22); padding:9px 16px; border-radius:999px; transition:border-color .2s, background .2s;}
+  .idline a:hover{border-color:var(--coral); background:rgba(255,90,44,.12);}
+  .idline a b{color:var(--coral); margin-right:7px; font-family:var(--serif); font-style:italic; font-weight:600;}
+  .metabar{display:flex; flex-wrap:wrap; gap:6px 24px; margin-top:30px; font-size:14.5px; font-weight:600; color:var(--on-ink-mut);}
+  .metabar b{color:var(--on-ink); font-weight:700;}
+  .metabar a{color:var(--coral); text-decoration:none; font-weight:700;}
 
-  /* stance rows */
-  .stance{display:grid; gap:14px;}
-  .srow{display:flex; gap:14px; align-items:flex-start; font-size:clamp(15px,1.9vw,18px); font-weight:600;}
-  .srow .dot{width:9px; height:9px; border-radius:50%; background:var(--coral); margin-top:.62em; flex-shrink:0;}
-  .srow small{display:block; font-size:.82em; color:var(--muted); font-weight:500; margin-top:2px;}
+  /* ── section head ── */
+  .sechead{display:flex; align-items:baseline; gap:16px; margin:clamp(56px,9vw,96px) 0 clamp(20px,3.5vw,34px);}
+  .sechead .n{font-family:var(--serif); font-style:italic; font-size:22px; color:var(--coral); font-weight:600;}
+  .sechead h2{font-size:clamp(13px,1.7vw,15px); font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0;}
+  .sechead .rule{flex:1; height:1px; background:var(--line);}
 
-  /* project card */
-  .cases{display:grid; gap:clamp(18px,2.6vw,26px);}
-  .case{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:clamp(22px,3.2vw,34px); box-shadow:var(--shadow);}
-  .case .top{display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;}
-  .case .icon{width:52px; height:52px; border-radius:14px; background:var(--coral-soft); border:1px solid var(--coral-line); display:flex; align-items:center; justify-content:center; font-size:26px; flex-shrink:0;}
-  .case .head{flex:1; min-width:200px;}
-  .case h3{font-size:clamp(21px,2.8vw,27px); font-weight:900; letter-spacing:-.02em; margin:0; line-height:1.15;}
-  .case .role{font-size:14px; font-weight:700; color:var(--muted); margin-top:5px;}
-  .badges{display:flex; gap:7px; flex-wrap:wrap; align-items:center;}
-  .badge{font-size:12px; font-weight:800; letter-spacing:.02em; padding:5px 11px; border-radius:999px; white-space:nowrap;}
+  /* ── stance ── */
+  .stance{display:grid; gap:2px; border-radius:18px; overflow:hidden; border:1px solid var(--line);}
+  .srow{display:flex; gap:18px; align-items:flex-start; padding:clamp(18px,2.6vw,26px) clamp(18px,2.6vw,28px); background:var(--card);}
+  .srow .k{font-family:var(--serif); font-style:italic; font-size:20px; color:var(--coral); font-weight:600; flex-shrink:0; width:1.6em; line-height:1.5;}
+  .srow .b{font-size:clamp(16px,2vw,19px); font-weight:700; letter-spacing:-.01em;}
+  .srow .b small{display:block; font-size:.8em; color:var(--muted); font-weight:500; margin-top:4px; letter-spacing:0;}
+
+  /* ── cases ── */
+  .cases{display:grid; gap:clamp(20px,3vw,30px);}
+  .case{background:var(--card); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,3.6vw,42px); box-shadow:var(--shadow); position:relative; overflow:hidden;}
+  .case .idx{position:absolute; top:clamp(14px,2vw,22px); right:clamp(20px,3vw,34px); font-family:var(--serif); font-size:clamp(58px,10vw,104px);
+    font-weight:600; font-style:italic; color:var(--coral); opacity:.12; line-height:1; pointer-events:none;}
+  .case .top{display:flex; align-items:center; gap:16px; flex-wrap:wrap; position:relative;}
+  .case .icon{width:56px; height:56px; border-radius:16px; background:var(--coral-soft); border:1px solid var(--coral-line);
+    display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0;}
+  .case .head{flex:1; min-width:180px;}
+  .case h3{font-size:clamp(23px,3.1vw,30px); font-weight:900; letter-spacing:-.025em; margin:0; line-height:1.12;}
+  .case .role{font-size:13.5px; font-weight:700; color:var(--muted); margin-top:6px;}
+  .badges{display:flex; gap:7px; flex-wrap:wrap;}
+  .badge{font-size:11.5px; font-weight:800; letter-spacing:.03em; padding:6px 12px; border-radius:999px; white-space:nowrap;}
   .badge.live{background:var(--coral); color:#fff;}
   .badge.proto{background:var(--cardsoft); color:var(--muted); border:1px solid var(--line);}
-  .badge.real{background:transparent; color:var(--good); border:1px solid color-mix(in srgb,var(--good) 40%,transparent);}
+  .badge.real{background:transparent; color:var(--good); border:1px solid color-mix(in srgb,var(--good) 42%,transparent);}
 
-  .pa{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px;}
-  .pa .block .t{font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin-bottom:6px;}
-  .pa .block p{margin:0; font-size:15.5px; font-weight:500; color:var(--ink);}
+  .pa{display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:26px; border-radius:16px; overflow:hidden; border:1px solid var(--line);}
+  .pa .block{background:var(--cardsoft); padding:clamp(16px,2.2vw,22px);}
+  .pa .block .t{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px; display:flex; align-items:center; gap:7px;}
+  .pa .block.problem .t{color:var(--faint);}
+  .pa .block.solution .t{color:var(--coral);}
+  .pa .block p{margin:0; font-size:15.5px; font-weight:500; line-height:1.55;}
   .pa .block.problem p{color:var(--muted);}
 
-  .points{list-style:none; padding:0; margin:20px 0 0; display:grid; gap:9px;}
-  .points li{position:relative; padding-left:22px; font-size:15px; font-weight:600;}
-  .points li::before{content:"→"; position:absolute; left:0; color:var(--coral); font-weight:800;}
+  .points{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:11px;}
+  .points li{position:relative; padding-left:26px; font-size:15px; font-weight:600; line-height:1.5;}
+  .points li::before{content:"→"; position:absolute; left:0; top:0; color:var(--coral); font-weight:800;}
   .points li small{font-weight:500; color:var(--muted);}
+  .points li b{color:var(--ink);}
 
-  .foot{display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; margin-top:22px; padding-top:18px; border-top:1px dashed var(--line);}
-  .stack{font-size:13px; font-weight:600; color:var(--faint);}
-  .demolink{display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:800; color:var(--coral); text-decoration:none;}
-  .demolink:hover{text-decoration:underline;}
+  .foot{display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; margin-top:26px; padding-top:20px; border-top:1px solid var(--line);}
+  .stack{font-size:12.5px; font-weight:600; color:var(--faint); letter-spacing:.01em;}
+  .demolink{display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:800; color:#fff; background:var(--coral);
+    padding:10px 18px; border-radius:999px; text-decoration:none; transition:background .2s, transform .2s; margin-left:auto;}
+  .demolink:hover{background:var(--coral-deep); transform:translateY(-1px);}
 
-  /* skills / closing */
+  /* ── skills ── */
   .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .kbox{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px;}
-  .kbox .t{font-size:13px; font-weight:800; color:var(--coral); letter-spacing:.02em;}
-  .kbox p{margin:6px 0 0; font-size:14.5px; font-weight:500; color:var(--muted);}
+  .kbox{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; position:relative;}
+  .kbox::before{content:""; position:absolute; left:0; top:22px; bottom:22px; width:3px; border-radius:3px; background:var(--coral);}
+  .kbox .t{font-size:14px; font-weight:800; letter-spacing:-.01em;}
+  .kbox p{margin:8px 0 0; font-size:14.5px; font-weight:500; color:var(--muted); line-height:1.55;}
   .kbox b{color:var(--ink);}
 
-  .honest{background:var(--coral-soft); border:1px solid var(--coral-line); border-radius:16px; padding:clamp(20px,3vw,28px); margin-top:16px;}
-  .honest .t{font-size:14px; font-weight:800; color:var(--coral-deep); letter-spacing:.02em;}
-  .honest p{margin:8px 0 0; font-size:15.5px; font-weight:500; color:var(--ink);}
+  /* ── honest ── */
+  .honest{background:var(--coral-soft); border:1px solid var(--coral-line); border-radius:20px; padding:clamp(24px,3.4vw,34px);}
+  .honest .t{font-family:var(--serif); font-style:italic; font-size:19px; color:var(--coral-deep); font-weight:600;}
+  .honest p{margin:12px 0 0; font-size:16px; font-weight:500; line-height:1.66; color:var(--ink);}
+  .honest b{font-weight:800;}
 
-  .closing{margin:clamp(48px,8vw,90px) 0 clamp(60px,10vw,110px);}
-  .closing .q{font-size:clamp(24px,4vw,44px); font-weight:900; letter-spacing:-.03em; line-height:1.18; text-wrap:balance;}
-  footer{padding:28px 0 60px; font-size:14px; color:var(--muted); font-weight:600; border-top:1px solid var(--line);}
+  /* ── closing ── */
+  .closing{background:var(--ink-deep); color:var(--on-ink); margin-top:clamp(56px,9vw,96px);}
+  .closing .wrap{padding:clamp(64px,11vw,120px) clamp(22px,5.5vw,48px);}
+  .closing .mark{font-family:var(--serif); font-style:italic; font-size:52px; color:var(--coral); line-height:0; display:block; height:.5em;}
+  .closing .q{font-size:clamp(25px,4.3vw,48px); font-weight:900; letter-spacing:-.03em; line-height:1.2; text-wrap:balance; margin:0;}
+  .closing .sig{margin-top:34px; display:flex; flex-wrap:wrap; gap:6px 22px; font-size:15px; font-weight:600; color:var(--on-ink-mut);}
+  .closing .sig b{color:var(--on-ink);}
+  .closing .sig a{color:var(--coral); text-decoration:none; font-weight:700;}
 
-  /* theme toggle */
-  .toggle{position:fixed; top:16px; right:16px; z-index:20; background:var(--card); border:1px solid var(--line);
-    border-radius:999px; padding:8px 14px; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; box-shadow:var(--shadow);}
-  .toggle:focus-visible{outline:2px solid var(--coral); outline-offset:2px;}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--coral); outline-offset:3px; border-radius:4px;}
+  /* ── toggle / a11y ── */
+  .toggle{position:fixed; top:16px; right:16px; z-index:30; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; padding:9px 15px; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; box-shadow:var(--shadow);}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--coral); outline-offset:3px; border-radius:6px;}
 
-  @media (max-width:640px){ .pa,.grid2{grid-template-columns:1fr;} }
-  @media (prefers-reduced-motion:no-preference){
-    .case{transition:transform .2s ease, box-shadow .2s ease;}
-    .case:hover{transform:translateY(-2px);}
-  }
+  @media (max-width:640px){ .pa,.grid2{grid-template-columns:1fr;} .demolink{margin-left:0;} }
 </style>
 
 <button class="toggle" id="tg" aria-label="라이트/다크 전환">◐ 테마</button>
 
-<div class="wrap">
-  <header>
-    <div class="eyebrow">Product Portfolio · 2026</div>
-    <h1>문제를 발견하면,<br><span class="em">만들어서</span> 증명합니다.</h1>
-    <p class="sub">마케터에서 출발해, 실무의 불편을 직접 서비스로 만드는 기획자입니다. 기획서에서 멈추지 않고 배포까지 갑니다.</p>
-    <div class="meta">
-      <span><b>소민</b> · 인플루언서 캐스팅 마케터(BDC·PPL)</span>
-      <span>지원 포지션 · <b>주니어 PM / 서비스 기획</b></span>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow rv">Product Portfolio · 2026</span>
+    <h1 class="rv">문제를 발견하면,<br><span class="em">만들어서</span> 증명합니다.</h1>
+    <p class="sub rv">마케터에서 출발해, 실무의 불편을 직접 서비스로 만드는 기획자입니다.<br>기획서에서 멈추지 않고, 동작하는 제품과 배포까지 갑니다.</p>
+    <nav class="idline rv" aria-label="프로젝트 바로가기">
+      <a href="#p1"><b>01</b>단가 에이전트</a>
+      <a href="#p2"><b>02</b>GoalFlow</a>
+      <a href="#p3"><b>03</b>꽃맵</a>
+      <a href="#p4"><b>04</b>연결오피스</a>
+    </nav>
+    <div class="metabar rv">
+      <span><b>소민</b> · 인플루언서 캐스팅 마케터 (BDC·PPL)</span>
+      <span>지원 · <b>주니어 PM / 서비스 기획</b></span>
       <a href="mailto:dlthols2277@naver.com">dlthols2277@naver.com</a>
     </div>
-  </header>
+  </div>
+</section>
+
+<div class="wrap">
 
   <!-- 일하는 방식 -->
-  <div class="sechead"><span class="n">00</span><h2>제가 일하는 방식</h2></div>
-  <div class="stance">
-    <div class="srow"><span class="dot"></span><div>내가 겪은 <span class="em">진짜 불편</span>에서 시작한다.
+  <div class="sechead rv"><span class="n">§</span><h2>제가 일하는 방식</h2><span class="rule"></span></div>
+  <div class="stance rv">
+    <div class="srow"><span class="k">01</span><div class="b">내가 겪은 <span class="em">진짜 불편</span>에서 시작한다.
       <small>남의 아이디어가 아니라, 매달 반복하던 내 업무의 페인포인트를 문제로 정의했습니다.</small></div></div>
-    <div class="srow"><span class="dot"></span><div>기획서가 아니라 <span class="em">동작하는 것</span>으로 증명한다.
-      <small>대화형 AI로 코드를 짜서 실제 배포 가능한 상태까지 만들었습니다.</small></div></div>
-    <div class="srow"><span class="dot"></span><div>사용자와 리스크를 <span class="em">먼저</span> 생각한다.
-      <small>얼굴 사진 차단, 개인정보 제거, 데이터 등급 분리 — 만들기 전에 지킬 선부터 그었습니다.</small></div></div>
+    <div class="srow"><span class="k">02</span><div class="b">기획서가 아니라 <span class="em">동작하는 것</span>으로 증명한다.
+      <small>대화형 AI로 코드를 짜서, 실제 배포 가능한 상태까지 만들었습니다.</small></div></div>
+    <div class="srow"><span class="k">03</span><div class="b">사용자와 리스크를 <span class="em">먼저</span> 생각한다.
+      <small>얼굴 사진 차단·개인정보 제거·데이터 등급 분리 — 만들기 전에 지킬 선부터 그었습니다.</small></div></div>
   </div>
 
   <!-- 프로젝트 -->
-  <div class="sechead"><span class="n">01</span><h2>만든 서비스</h2></div>
+  <div class="sechead rv"><span class="n">§</span><h2>만든 서비스</h2><span class="rule"></span></div>
   <div class="cases">
 
-    <!-- 단가 에이전트 -->
-    <article class="case">
+    <!-- 01 단가 에이전트 -->
+    <article class="case rv" id="p1">
+      <span class="idx">01</span>
       <div class="top">
         <div class="icon">💰</div>
         <div class="head">
@@ -163,22 +211,23 @@
         <div class="badges"><span class="badge real">실무 도입</span><span class="badge live">Live</span></div>
       </div>
       <div class="pa">
-        <div class="block problem"><div class="t">Problem</div><p>40개 넘는 캠페인 시트에 인플루언서 단가가 제각각 흩어져, 매달 "이 채널 얼마였지?"를 손으로 찾아야 했습니다.</p></div>
-        <div class="block"><div class="t">Solution</div><p>채널 링크를 유일 키로 삼아 흩어진 단가를 통합하고, 예산·유형별로 1초 만에 조회하는 웹 도구를 만들었습니다.</p></div>
+        <div class="block problem"><div class="t">◦ Problem</div><p>40개 넘는 캠페인 시트에 인플루언서 단가가 제각각 흩어져, 매달 "이 채널 얼마였지?"를 손으로 찾아야 했습니다.</p></div>
+        <div class="block solution"><div class="t">◆ Solution</div><p>채널 링크를 유일 키로 삼아 흩어진 단가를 통합하고, 예산·유형별로 1초 만에 조회하는 웹 도구를 만들었습니다.</p></div>
       </div>
       <ul class="points">
         <li>통합 검색 · 예산 필터 · 엑셀 붙여넣기 자동 매칭 <small>— 이름이 비슷하면 링크로 식별</small></li>
         <li>"고객사 공유가 / 내부 실비" <b>데이터 등급을 분리</b>해 실비 노출 사고를 원천 차단</li>
-        <li>AI가 지적한 <b>연락처 유출 리스크</b>를 받아들여, 실데이터는 구글 로그인·시트 공유자만 접근하도록 설계</li>
+        <li>AI가 지적한 <b>연락처 유출 리스크</b>를 받아들여, 실데이터는 구글 로그인·시트 공유자만 접근하도록 재설계</li>
       </ul>
       <div class="foot">
-        <a class="demolink" href="https://sominly.github.io/danga-agent/" target="_blank" rel="noopener">▶ 데모 열기 (가상 데이터)</a>
         <span class="stack">Google Sheets · Apps Script · Web</span>
+        <a class="demolink" href="https://sominly.github.io/danga-agent/" target="_blank" rel="noopener">데모 열기 (가상 데이터) ↗</a>
       </div>
     </article>
 
-    <!-- GoalFlow -->
-    <article class="case">
+    <!-- 02 GoalFlow -->
+    <article class="case rv" id="p2">
+      <span class="idx">02</span>
       <div class="top">
         <div class="icon">🎯</div>
         <div class="head">
@@ -188,22 +237,23 @@
         <div class="badges"><span class="badge live">Live</span></div>
       </div>
       <div class="pa">
-        <div class="block problem"><div class="t">Problem</div><p>사람들은 대화 속에서 "하고 싶은 것"을 흘리지만, 그게 목표와 실행으로 이어지지 않고 흩어집니다.</p></div>
-        <div class="block"><div class="t">Solution</div><p>대화에서 잠재 목표를 감지·제안하고, 승인하면 단계별 로드맵과 할 일로 자동 전개되는 웹앱.</p></div>
+        <div class="block problem"><div class="t">◦ Problem</div><p>사람들은 대화 속에서 "하고 싶은 것"을 흘리지만, 그게 목표와 실행으로 이어지지 않고 흩어집니다.</p></div>
+        <div class="block solution"><div class="t">◆ Solution</div><p>대화에서 잠재 목표를 감지·제안하고, 승인하면 단계별 로드맵과 할 일로 자동 전개되는 웹앱.</p></div>
       </div>
       <ul class="points">
         <li>대화형 구체화(추가 질문) → <b>사용자가 승인해야만</b> 저장 <small>— AI가 마음대로 결정하지 않는 경계</small></li>
-        <li>이메일·초대코드 자체 인증으로 <b>사용자 데이터 격리</b>, 관리자 검증은 서버에서</li>
+        <li>이메일·초대코드 자체 인증으로 <b>사용자 데이터 격리</b>, 관리자 권한은 서버에서 검증</li>
         <li>초기 외부 도구(Atoms)의 한계를 파악하고 <b>자체 인증 + Gemini로 직접 전환</b></li>
       </ul>
       <div class="foot">
-        <a class="demolink" href="https://goalflow-z8pa.onrender.com" target="_blank" rel="noopener">▶ 라이브 앱 열기</a>
         <span class="stack">FastAPI · React · Postgres · Gemini</span>
+        <a class="demolink" href="https://goalflow-z8pa.onrender.com" target="_blank" rel="noopener">라이브 앱 열기 ↗</a>
       </div>
     </article>
 
-    <!-- 꽃맵 -->
-    <article class="case">
+    <!-- 03 꽃맵 -->
+    <article class="case rv" id="p3">
+      <span class="idx">03</span>
       <div class="top">
         <div class="icon">🌸</div>
         <div class="head">
@@ -213,32 +263,33 @@
         <div class="badges"><span class="badge proto">Prototype</span></div>
       </div>
       <div class="pa">
-        <div class="block problem"><div class="t">Problem</div><p>"지금 어디에 꽃이 피었나"는 검색으로 안 나옵니다. 시즌·위치 정보는 사람들 머릿속에만 있어요.</p></div>
-        <div class="block"><div class="t">Solution</div><p>'가슴속 삼천원'처럼 <b>사용자 제보로만</b> 채워지는 시즌 꽃 지도. 능소화 시즌엔 능소화 핀 곳을 서로 알려줍니다.</p></div>
+        <div class="block problem"><div class="t">◦ Problem</div><p>"지금 어디에 꽃이 피었나"는 검색으로 안 나옵니다. 시즌·위치 정보는 사람들 머릿속에만 있어요.</p></div>
+        <div class="block solution"><div class="t">◆ Solution</div><p>'가슴속 삼천원'처럼 <b>사용자 제보로만</b> 채워지는 시즌 꽃 지도. 능소화 시즌엔 능소화 핀 곳을 서로 알려줍니다.</p></div>
       </div>
       <ul class="points">
-        <li><b>얼굴 자동 차단</b>(face-api) · <b>사진 EXIF/GPS 제거</b> · 핀 좌표 뭉개기(~11m) <small>— 특정 주택 지목 방지</small></li>
+        <li><b>얼굴 자동 차단</b>(face-api) · <b>사진 EXIF·GPS 제거</b> · 핀 좌표 뭉개기(~11m) <small>— 특정 주택 지목 방지</small></li>
         <li>익명 읽기+제보만 허용, 남의 글 수정·삭제 불가(RLS) · 신고 시 자동 숨김</li>
-        <li>전국 30여 종 꽃 명소를 미리 시드로 채워, 빈 지도 문제(cold start)를 완화</li>
+        <li>전국 30여 종 꽃 명소를 미리 시드로 채워 <b>빈 지도(cold start) 문제를 완화</b></li>
       </ul>
       <div class="foot">
         <span class="stack">Next.js · Supabase · 네이버 지도 API</span>
       </div>
     </article>
 
-    <!-- 연결오피스 -->
-    <article class="case">
+    <!-- 04 연결오피스 -->
+    <article class="case rv" id="p4">
+      <span class="idx">04</span>
       <div class="top">
         <div class="icon">🏢</div>
         <div class="head">
           <h3>연결오피스</h3>
-          <div class="role">기획 · UI 구성 · 구현</div>
+          <div class="role">기획 · 화면 흐름 설계 · 구현</div>
         </div>
         <div class="badges"><span class="badge proto">Prototype</span></div>
       </div>
       <div class="pa">
-        <div class="block problem"><div class="t">Problem</div><p>원격·유연근무에서 "지금 누가 일하고 있는지", "이번 주 뭘 하는지"가 서로 안 보입니다.</p></div>
-        <div class="block"><div class="t">Solution</div><p>출퇴근·실시간 상태·주간 업무·집중 타이머를 한 화면에 모은 가벼운 가상 오피스.</p></div>
+        <div class="block problem"><div class="t">◦ Problem</div><p>원격·유연근무에서 "지금 누가 일하고 있는지", "이번 주 뭘 하는지"가 서로 안 보입니다.</p></div>
+        <div class="block solution"><div class="t">◆ Solution</div><p>출퇴근·실시간 상태·주간 업무·집중 타이머를 한 화면에 모은 가벼운 가상 오피스.</p></div>
       </div>
       <ul class="points">
         <li>출근/퇴근 · 실시간 팀 상태 · 주간 업무 보드 · 집중 타이머 <small>— 일상 협업 루틴을 한 곳에</small></li>
@@ -252,29 +303,34 @@
   </div>
 
   <!-- 역량 -->
-  <div class="sechead"><span class="n">02</span><h2>이 과정에서 보여준 역량</h2></div>
-  <div class="grid2">
+  <div class="sechead rv"><span class="n">§</span><h2>이 과정에서 보여준 역량</h2><span class="rule"></span></div>
+  <div class="grid2 rv">
     <div class="kbox"><div class="t">문제 정의</div><p>실무 페인을 <b>측정 가능한 문제</b>로 좁히고, 무엇을 안 할지도 정했습니다.</p></div>
-    <div class="kbox"><div class="t">실행·배포</div><p>기획에서 멈추지 않고 <b>동작하는 제품</b>과 라이브 URL까지 냈습니다.</p></div>
-    <div class="kbox"><div class="t">데이터·구조 설계</div><p>키 설계, 등급 분리, 인증·격리 등 <b>제품의 뼈대</b>를 직접 잡았습니다.</p></div>
-    <div class="kbox"><div class="t">사용자·리스크 감수성</div><p>개인정보·보안·오남용을 <b>만들기 전에</b> 고려했습니다.</p></div>
+    <div class="kbox"><div class="t">실행 · 배포</div><p>기획에서 멈추지 않고 <b>동작하는 제품</b>과 라이브 URL까지 냈습니다.</p></div>
+    <div class="kbox"><div class="t">데이터 · 구조 설계</div><p>키 설계, 등급 분리, 인증·격리 등 <b>제품의 뼈대</b>를 직접 잡았습니다.</p></div>
+    <div class="kbox"><div class="t">사용자 · 리스크 감수성</div><p>개인정보·보안·오남용을 <b>만들기 전에</b> 고려했습니다.</p></div>
   </div>
 
   <!-- 솔직한 다음 스텝 -->
-  <div class="sechead"><span class="n">03</span><h2>지금의 한계와 다음 스텝</h2></div>
-  <div class="honest">
-    <div class="t">솔직하게</div>
-    <p>아직 <b>사용 지표(사용자 수·리텐션·효율 개선 수치)</b>와 팀 협업 경험은 얇습니다. 그래서 다음은 — 단가 에이전트를 팀에 실제 배포해 <b>"찾는 시간 얼마나 줄었는지"</b>를 측정하고, GoalFlow 초대 사용자의 행동 데이터로 다음 기능을 정하는 것. 만드는 것에서 <b>검증하는 것</b>으로 넘어가는 단계입니다.</p>
+  <div class="sechead rv"><span class="n">§</span><h2>지금의 한계와 다음 스텝</h2><span class="rule"></span></div>
+  <div class="honest rv">
+    <div class="t">솔직하게,</div>
+    <p>아직 <b>사용 지표(사용자 수·리텐션·효율 개선 수치)</b>와 팀 협업 경험은 얇습니다. 그래서 다음은 — 단가 에이전트를 팀에 실제 배포해 <b>"찾는 시간이 얼마나 줄었는지"</b>를 측정하고, GoalFlow 초대 사용자의 행동 데이터로 다음 기능을 정하는 것. 만드는 것에서 <b>검증하는 것</b>으로 넘어가는 단계입니다.</p>
   </div>
 
-  <div class="closing">
-    <p class="q">저는 아이디어를 <span class="em">정리하는 사람</span>이 아니라,<br>문제를 <span class="em">만들어서 검증하는 사람</span>입니다.</p>
-  </div>
-
-  <footer>
-    소민 · 주니어 PM / 서비스 기획 지원 &nbsp;·&nbsp; <a href="mailto:dlthols2277@naver.com" style="color:var(--coral); text-decoration:none; font-weight:700;">dlthols2277@naver.com</a>
-  </footer>
 </div>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="wrap">
+    <span class="mark rv">"</span>
+    <p class="q rv">저는 아이디어를 <span class="em">정리하는 사람</span>이 아니라,<br>문제를 <span class="em">만들어서 검증하는 사람</span>입니다.</p>
+    <div class="sig rv">
+      <span><b>소민</b> · 주니어 PM / 서비스 기획 지원</span>
+      <a href="mailto:dlthols2277@naver.com">dlthols2277@naver.com</a>
+    </div>
+  </div>
+</section>
 
 <script>
   (function(){
@@ -284,6 +340,12 @@
       if(!cur){ cur=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'; }
       document.documentElement.setAttribute('data-theme', cur==='dark'?'light':'dark');
     });
+    var els=[].slice.call(document.querySelectorAll('.rv'));
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{threshold:.12, rootMargin:"0px 0px -8% 0px"});
+    els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i,6)*40)+"ms"; io.observe(e); });
   })();
 </script>
 </body>
