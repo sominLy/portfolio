@@ -7,9 +7,9 @@
 <meta name="description" content="마케터에서 출발해, 문제를 직접 서비스로 만들어 배포하는 기획자 이소민의 PM · 서비스 기획 포트폴리오.">
 <style>
   :root{
-    --paper:#FBF9F5; --ink:#16161C; --muted:#65656F; --faint:#9C9AA1;
-    --line:#E9E5DD; --card:#FFFFFF; --cardsoft:#F4F1EA;
-    --coral:#FF5A2C; --coral-deep:#D63A0C; --coral-soft:#FFEBE1; --coral-line:#FFCDB8;
+    --paper:#FFFFFF; --ink:#1A1A1C; --muted:#5B5D63; --faint:#A0A3AB;
+    --line:#EAECEE; --card:#FFFFFF; --cardsoft:#F5F6F7;
+    --coral:#03C75A; --coral-deep:#02A94C; --coral-soft:#E7F9EF; --coral-line:#B8ECCE;
     --ink-deep:#131218; --ink-card:#1E1D25; --on-ink:#F6F4EF; --on-ink-mut:rgba(246,244,239,.62);
     --good:#1E9E6A; --blue:#2E6BFF; --blue-soft:#E7EEFF;
     --shadow:0 1px 2px rgba(22,22,28,.04),0 10px 30px -8px rgba(22,22,28,.10);
@@ -21,16 +21,16 @@
     :root{
       --paper:#131217; --ink:#F3F1ED; --muted:#9E9CA6; --faint:#6C6A75;
       --line:#292832; --card:#1C1B22; --cardsoft:#201F27;
-      --coral:#FF7047; --coral-deep:#FF8E68; --coral-soft:#2B1B14; --coral-line:#48301F;
+      --coral:#05D466; --coral-deep:#57DE93; --coral-soft:#10241A; --coral-line:#1E4530;
       --ink-deep:#0E0D12; --ink-card:#1A1920; --on-ink:#F3F1ED; --on-ink-mut:rgba(243,241,237,.6);
       --good:#3FBE86; --blue:#6C93FF; --blue-soft:#1A2033;
       --shadow:0 1px 2px rgba(0,0,0,.35),0 14px 34px -10px rgba(0,0,0,.5);
     }
   }
   :root[data-theme="light"]{
-    --paper:#FBF9F5; --ink:#16161C; --muted:#65656F; --faint:#9C9AA1;
-    --line:#E9E5DD; --card:#FFFFFF; --cardsoft:#F4F1EA;
-    --coral:#FF5A2C; --coral-deep:#D63A0C; --coral-soft:#FFEBE1; --coral-line:#FFCDB8;
+    --paper:#FFFFFF; --ink:#1A1A1C; --muted:#5B5D63; --faint:#A0A3AB;
+    --line:#EAECEE; --card:#FFFFFF; --cardsoft:#F5F6F7;
+    --coral:#03C75A; --coral-deep:#02A94C; --coral-soft:#E7F9EF; --coral-line:#B8ECCE;
     --ink-deep:#131218; --ink-card:#1E1D25; --on-ink:#F6F4EF; --on-ink-mut:rgba(246,244,239,.62);
     --good:#1E9E6A; --blue:#2E6BFF; --blue-soft:#E7EEFF;
     --shadow:0 1px 2px rgba(22,22,28,.04),0 10px 30px -8px rgba(22,22,28,.10);
@@ -38,7 +38,7 @@
   :root[data-theme="dark"]{
     --paper:#131217; --ink:#F3F1ED; --muted:#9E9CA6; --faint:#6C6A75;
     --line:#292832; --card:#1C1B22; --cardsoft:#201F27;
-    --coral:#FF7047; --coral-deep:#FF8E68; --coral-soft:#2B1B14; --coral-line:#48301F;
+    --coral:#05D466; --coral-deep:#57DE93; --coral-soft:#10241A; --coral-line:#1E4530;
     --ink-deep:#0E0D12; --ink-card:#1A1920; --on-ink:#F3F1ED; --on-ink-mut:rgba(243,241,237,.6);
     --good:#3FBE86; --blue:#6C93FF; --blue-soft:#1A2033;
     --shadow:0 1px 2px rgba(0,0,0,.35),0 14px 34px -10px rgba(0,0,0,.5);
@@ -62,7 +62,7 @@
   /* ── HERO ── */
   .hero{background:var(--ink-deep); color:var(--on-ink); position:relative; overflow:hidden;}
   .hero::after{content:""; position:absolute; right:-14vw; top:-14vw; width:44vw; height:44vw; border-radius:50%;
-    background:radial-gradient(circle at 30% 30%, rgba(255,90,44,.30), rgba(255,90,44,0) 62%); pointer-events:none;}
+    background:radial-gradient(circle at 30% 30%, rgba(3,199,90,.30), rgba(3,199,90,0) 62%); pointer-events:none;}
   .hero .wrap{position:relative; z-index:1; padding:clamp(70px,13vw,148px) clamp(22px,5.5vw,48px) clamp(46px,8vw,84px);}
   .eyebrow{font-size:12.5px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--coral);
     display:inline-flex; align-items:center; gap:10px;}
@@ -73,7 +73,7 @@
   .idline{display:flex; flex-wrap:wrap; gap:10px 12px; margin-top:clamp(30px,5vw,46px);}
   .idline a{font-size:14px; font-weight:700; text-decoration:none; color:var(--on-ink);
     border:1px solid rgba(246,244,239,.22); padding:9px 16px; border-radius:999px; transition:border-color .2s, background .2s;}
-  .idline a:hover{border-color:var(--coral); background:rgba(255,90,44,.12);}
+  .idline a:hover{border-color:var(--coral); background:rgba(3,199,90,.12);}
   .idline a b{color:var(--coral); margin-right:7px; font-family:var(--serif); font-style:italic; font-weight:600;}
   .metabar{display:flex; flex-wrap:wrap; gap:6px 24px; margin-top:30px; font-size:14.5px; font-weight:600; color:var(--on-ink-mut);}
   .metabar b{color:var(--on-ink); font-weight:700;}
