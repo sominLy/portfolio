@@ -365,7 +365,7 @@
           <h3>단가 에이전트 <span style="font-weight:600;font-family:var(--serif);font-style:italic;color:var(--coral);font-size:.62em">dangajo</span></h3>
           <div class="role">서비스 기획 · 데이터 설계 · 구현 · 배포 — 전 과정 단독 · 광화문 라이언즈 4기 Demo Day 발표</div>
         </div>
-        <div class="badges"><span class="badge real">실무 도입</span><span class="badge live">Live</span></div>
+        <div class="badges"><span class="badge real">실무 도입</span><span class="badge live">Live</span><span class="badge proto">공개판 = 더미 데이터</span></div>
       </div>
       <div class="pa">
         <div class="block problem"><div class="t">◦ Problem</div><p>같은 인플루언서인데 팀마다 가격이 다릅니다. 40개 넘는 캠페인 시트에 단가가 흩어져 있고, 한 사람이 “말랑콩떡 이진 / 이진 / 유이진” 세 이름으로 적혀 — 있는데도 “없다”고 나왔습니다.</p></div>
@@ -433,10 +433,16 @@
         </div>
       </div>
 
+      <div class="mock" style="margin-top:14px">
+        <div class="cap"><span class="dots"><i></i><i></i><i></i></span><span class="t">실제 배포 화면 캡처 — 더미 데이터 버전</span><span class="url">dangajo.vercel.app</span></div>
+        <img src="../dangajo-capture.png" alt="단가 조회 실제 배포 화면 — 상단에 '더미 데이터' 뱃지가 표시된 검색·예산 필터 UI" style="width:100%;display:block" loading="lazy">
+      </div>
+      <div class="mnote" style="margin-top:8px">앱 상단에 <b>‘더미 데이터’ 뱃지를 항상 노출</b>해, 보는 사람이 가상 데이터임을 오해할 수 없게 했습니다.</div>
+
       <div class="foot">
         <span class="stack">Google Sheets · Apps Script · React · Vercel</span>
         <a class="demolink" href="https://dangajo.vercel.app" target="_blank" rel="noopener">라이브 앱 열기 ↗</a>
-        <span class="demonote">※ 화면은 가상 데이터 기준 재현입니다. 실데이터 버전은 구글 로그인·시트 공유자만 접근하도록 분리했습니다.</span>
+        <span class="demonote">※ 공개 데모의 모든 데이터는 <b>가상(더미)</b>입니다. 실비·연락처가 담긴 실데이터 버전은 구글 로그인 + 시트 공유자만 접근하는 내장 웹앱으로 — <b>설계 단계부터 분리</b>했습니다.</span>
       </div>
     </article>
 
