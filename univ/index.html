@@ -90,6 +90,12 @@
   .sechead .rule{flex:1; height:1px; background:var(--line);}
   .seclede{font-size:clamp(16px,2vw,19px); font-weight:600; color:var(--ink); letter-spacing:-.01em; margin:0 0 clamp(22px,3.5vw,34px); max-width:60ch;}
   .seclede span{color:var(--muted); font-weight:500;}
+  .concept{font-family:var(--serif); font-style:italic; font-weight:600;
+    font-size:clamp(21px,3.2vw,32px); letter-spacing:-.01em; line-height:1.4;
+    margin:0 0 12px; color:var(--ink); text-wrap:balance;}
+  .concept .em{color:var(--coral-deep); font-style:italic;}
+  .hl{background:linear-gradient(transparent 58%, var(--coral-soft) 58%);
+    font-weight:800; color:var(--ink); padding:0 2px; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
 
   /* ── stance ── */
   .stance{display:grid; gap:2px; border-radius:18px; overflow:hidden; border:1px solid var(--line);}
@@ -304,11 +310,12 @@
 
   <!-- Summary (지원 직무 맞춤 요약) -->
   <div class="sechead rv"><span class="n">§</span><h2>Summary — 이 직무에 필요한 세 가지</h2><span class="rule"></span></div>
-  <p class="seclede rv">대학 AI·클라우드 비즈니스 공고의 담당업무를 기준으로, <b>이미 해본 일</b>을 세 가지로 요약했습니다.</p>
+  <p class="concept rv">AI를 현장의 언어로 번역하는, <span class="em">실행형 AI 서비스 기획자</span>입니다.</p>
+  <p class="seclede rv">대학 AI·클라우드 비즈니스 공고의 담당업무 기준으로, <b>이미 해본 일</b> 세 가지입니다.</p>
   <div class="grid2 rv" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
-    <div class="kbox"><div class="t">① 생성형 AI 서비스 기획·구현</div><p>단가 에이전트·GoalFlow — “판단은 사람, 반복은 AI”라는 경계를 설계해 <b>실무 반복 업무 60% 단축</b>. AI 활용 방안 기획을 문서가 아니라 동작하는 서비스로 증명했습니다.</p></div>
-    <div class="kbox"><div class="t">② 제안 · 문서화 역량</div><p><b>유스케이스 18종 명세</b>·화면설계·린캔버스, 데모데이 발표까지. 기획-디자인-개발 간 피그마 미해결 코멘트 <b>0%</b>를 유지한 문서화 습관이 있습니다.</p></div>
-    <div class="kbox"><div class="t">③ 협업 · 커뮤니케이션</div><p>메타버스 스타트업 유일 PM으로 표준 의뢰서·QA 매뉴얼을 만들어 <b>커뮤니케이션 오류 0%</b>, 조직이 3인 → 8인으로 커져도 협업 구조를 유지했습니다.</p></div>
+    <div class="kbox"><div class="t">기획·구현 — 판단은 사람에게, 반복은 AI에게</div><p>단가 에이전트·GoalFlow — 경계를 설계해 <span class="hl">실무 반복 업무 60% 단축</span>. AI 활용 방안 기획을 문서가 아니라 동작하는 서비스로 증명했습니다.</p></div>
+    <div class="kbox"><div class="t">문서화 — 말보다 명세로 합의한다</div><p><span class="hl">유스케이스 18종 명세</span>·화면설계·린캔버스, 데모데이 발표까지. 기획-디자인-개발 간 피그마 미해결 코멘트 <span class="hl">0%</span>를 유지한 문서화 습관이 있습니다.</p></div>
+    <div class="kbox"><div class="t">협업 — 조직이 커져도 무너지지 않는 구조로</div><p>메타버스 스타트업 유일 PM으로 표준 의뢰서·QA 매뉴얼을 만들어 <span class="hl">커뮤니케이션 오류 0%</span>, 조직이 3인 → 8인으로 커져도 협업 구조를 유지했습니다.</p></div>
   </div>
 
   <!-- ============ A. 만든 서비스 ============ -->

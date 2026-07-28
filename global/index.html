@@ -90,6 +90,12 @@
   .sechead .rule{flex:1; height:1px; background:var(--line);}
   .seclede{font-size:clamp(16px,2vw,19px); font-weight:600; color:var(--ink); letter-spacing:-.01em; margin:0 0 clamp(22px,3.5vw,34px); max-width:60ch;}
   .seclede span{color:var(--muted); font-weight:500;}
+  .concept{font-family:var(--serif); font-style:italic; font-weight:600;
+    font-size:clamp(21px,3.2vw,32px); letter-spacing:-.01em; line-height:1.4;
+    margin:0 0 12px; color:var(--ink); text-wrap:balance;}
+  .concept .em{color:var(--coral-deep); font-style:italic;}
+  .hl{background:linear-gradient(transparent 58%, var(--coral-soft) 58%);
+    font-weight:800; color:var(--ink); padding:0 2px; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
 
   /* ── stance ── */
   .stance{display:grid; gap:2px; border-radius:18px; overflow:hidden; border:1px solid var(--line);}
@@ -303,11 +309,12 @@
 
   <!-- Summary (지원 직무 맞춤 요약) -->
   <div class="sechead rv"><span class="n">§</span><h2>Summary — 이 직무에 필요한 세 가지</h2><span class="rule"></span></div>
-  <p class="seclede rv">글로벌 사업개발 공고의 담당업무를 기준으로, <b>이미 해본 일</b>을 세 가지로 요약했습니다.</p>
+  <p class="concept rv">숫자로 설득하고 AI로 속도를 내는, <span class="em">조율형 사업개발 지원자</span>입니다.</p>
+  <p class="seclede rv">글로벌 사업개발 공고의 담당업무 기준으로, <b>이미 해본 일</b> 세 가지입니다.</p>
   <div class="grid2 rv" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
-    <div class="kbox"><div class="t">① 이해관계자 조율</div><p>물류팀 vs 세일즈팀의 충돌을 비교표·시뮬레이션으로 합의시켜 <b>배송비 36.6% 절감 · 작업시간 60% 단축</b>. 파트너·기관과의 협업 설계에 그대로 통하는 역량입니다.</p></div>
-    <div class="kbox"><div class="t">② AI 업무 자동화 워크플로우</div><p>공고의 “AI를 활용한 표준 업무 자동화 워크플로우 기획·구현” — 단가 에이전트로 <b>이미 실무에서 완주</b>했습니다. 반복 업무 60% 단축.</p></div>
-    <div class="kbox"><div class="t">③ 리서치 → 의사결정 근거</div><p><b>14만 건</b>을 크롤링·정제(71,863건)해 페인포인트를 도출하고 전략으로 번역(우수·장려상). 자료 정리가 아니라 근거를 만드는 리서치입니다.</p></div>
+    <div class="kbox"><div class="t">조율 — 옳고 그름 대신, 납득할 데이터를 먼저 만든다</div><p>물류팀 vs 세일즈팀의 충돌을 비교표·시뮬레이션으로 합의시켜 <span class="hl">배송비 36.6% 절감 · 작업시간 60% 단축</span>. 파트너·기관과의 협업 설계에 그대로 통하는 역량입니다.</p></div>
+    <div class="kbox"><div class="t">자동화 — 반복은 시스템에, 판단은 사람에게</div><p>공고의 “AI를 활용한 표준 업무 자동화 워크플로우 기획·구현” — 단가 에이전트로 <span class="hl">이미 실무에서 완주</span>했습니다. 반복 업무 60% 단축.</p></div>
+    <div class="kbox"><div class="t">리서치 — 자료를 모으기 전에, 질문부터 설계한다</div><p><span class="hl">14만 건</span>을 크롤링·정제(71,863건)해 페인포인트를 도출하고 전략으로 번역(우수·장려상). 자료 정리가 아니라 근거를 만드는 리서치입니다.</p></div>
   </div>
 
   <!-- ============ A. 만든 서비스 ============ -->
