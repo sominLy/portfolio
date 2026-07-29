@@ -17,4 +17,10 @@
 .mini-project .brief{font-size:20px;line-height:1.55;color:var(--muted)}
 .facts{display:grid;gap:14px}.fact{padding:20px 22px;border-left:6px solid var(--green);background:#faf8f3}
 .fact b{display:block;font-size:17px;margin-bottom:6px}.fact span{font-size:16px;line-height:1.45;color:var(--muted)}
+h1,h2,h3,p,li,.intro,.brief,.one-line,.fact span{word-break:keep-all;line-break:strict;overflow-wrap:normal}
+.cover h1,.title,.profile .intro,.summary h2,.project-cover h2,.page-head h2,.mini-project h2,.learning h2,.closing h2{text-wrap:balance}
+.page-head h2{max-width:24ch}
+.project-cover h2{max-width:17ch}
+.mini-project h2{max-width:15ch}
+.green{-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:.02em .1em}
 @media(max-width:760px){.toc.four,.story-grid,.mini-project,.decision{grid-template-columns:1fr}}
