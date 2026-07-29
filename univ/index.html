@@ -55,7 +55,7 @@
   .wrap{max-width:1000px; margin:0 auto; padding:0 clamp(22px,5.5vw,48px);}
   .em{color:var(--coral);}
 
-  .rv{opacity:0; transform:translateY(18px);}
+  .rv{opacity:1; transform:none;}
   .rv.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
   @media (prefers-reduced-motion:reduce){ .rv{opacity:1; transform:none;} }
 
@@ -290,7 +290,7 @@
     <div class="metabar rv">
       <span><b>이소민</b> · 인플루언서 캐스팅 마케터 (BDC·PPL)</span>
       <span>지원 · <b>대학 AI·클라우드 비즈니스 (체험형 인턴)</b></span>
-      <a href="mailto:somin.so.win@gmail.com">somin.so.win@gmail.com</a>
+      <span>Portfolio · 2026</span>
     </div>
   </div>
 </section>
@@ -315,12 +315,12 @@
   <div class="grid2 rv" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
     <div class="kbox"><div class="t">기획·구현 — 판단은 사람에게, 반복은 AI에게</div><p>단가 에이전트·GoalFlow — 경계를 설계해 <span class="hl">실무 반복 업무 60% 단축</span>. AI 활용 방안 기획을 문서가 아니라 동작하는 서비스로 증명했습니다.</p></div>
     <div class="kbox"><div class="t">문서화 — 말보다 명세로 합의한다</div><p><span class="hl">유스케이스 18종 명세</span>·화면설계·린캔버스, 데모데이 발표까지. 기획-디자인-개발 간 피그마 미해결 코멘트 <span class="hl">0%</span>를 유지한 문서화 습관이 있습니다.</p></div>
-    <div class="kbox"><div class="t">협업 — 조직이 커져도 무너지지 않는 구조로</div><p>메타버스 스타트업 유일 PM으로 표준 의뢰서·QA 매뉴얼을 만들어 <span class="hl">커뮤니케이션 오류 0%</span>, 조직이 3인 → 8인으로 커져도 협업 구조를 유지했습니다.</p></div>
+    <div class="kbox"><div class="t">협업 — 고객 요구를 제작 기준으로 전환한다</div><p>메타버스 스타트업의 유일한 PM으로 표준 의뢰서·QA 매뉴얼을 만들어 요구사항 누락과 반복 QA를 줄였습니다. 조직이 3인 → 8인으로 확대된 뒤에도 같은 협업 구조를 유지했습니다.</p></div>
   </div>
 
   <!-- ============ A. 만든 서비스 ============ -->
   <div class="sechead rv" id="built"><span class="n">A</span><h2>직접 만들어 배포한 서비스</h2><span class="rule"></span></div>
-  <p class="seclede rv">네 개 모두 <b>실제로 배포된 라이브 서비스</b>입니다. <span>일부는 로그인해야 안이 보입니다 — 아래 링크로 직접 들어가 확인해 보세요.</span></p>
+  <p class="seclede rv">네 개 모두 직접 기획·구현해 <b>접속 가능한 형태로 배포</b>했습니다. <span>단가 검색 서비스는 실무에서 사용 중이며, 오피스링크는 지인들과 사용하는 소규모 베타입니다.</span></p>
   <div class="cases">
 
     <!-- 01 단가 에이전트 -->
@@ -545,8 +545,8 @@
 
     <div class="pcard rv">
       <div class="ph"><h4>시장에 가면</h4><span class="pmeta">LG DX School · 2025.6–12</span></div>
-      <p class="pdesc">방한 외국인 대상 <b>실시간 제보 기반 전통시장 지도</b> 기획·제작. 글로벌 커뮤니티 <b>14만 건</b>을 크롤링·정제(71,863건)하고, Sentiment 가중·밀도 기반 클러스터링으로 핵심 페인포인트를 도출. “정보 주체가 가게 주인”이라는 구조적 원인까지 파고들었습니다.</p>
-      <span class="pres">🏆 우수·장려상 수상</span>
+      <p class="pdesc">방한 외국인 대상 <b>실시간 제보 기반 전통시장 지도</b> 기획·제작. 글로벌 커뮤니티 데이터 <b>약 14만 건</b>을 분석하고, 감성 가중·밀도 기반 클러스터링으로 핵심 페인포인트를 도출했습니다. “정보 주체가 가게 주인”이라는 구조적 원인까지 확인했습니다.</p>
+      <span class="pres">🏆 장려상 수상</span>
       <div class="prole">역할 · 컨셉 기획 50% / 세부 기능 80% / 유스케이스·기능명세 90% (5인, PM 2)</div>
     </div>
 
@@ -580,7 +580,7 @@
 
     <div class="pcard rv">
       <div class="ph"><h4>메타버스 이벤트 기획 PM</h4><span class="pmeta">스타트업 · 2021.08–12</span></div>
-      <p class="pdesc">유일한 PM으로 표준 작업 의뢰서·QA 매뉴얼을 만들어 <b>커뮤니케이션 오류 0%</b>, 초기 기획 단계 <b>약 50% 단축</b>. 운영 규모가 <b>3인 → 8인</b>으로 확장되는 과정을 함께 만들었습니다.</p>
+      <p class="pdesc">유일한 PM으로 고객사의 요구를 제작팀이 실행할 수 있는 표준 작업 의뢰서와 QA 매뉴얼로 전환했습니다. 그 결과 초기 맵 기획 시간을 <b>약 50% 단축</b>했고, 조직이 <b>3인 → 8인</b>으로 확대된 뒤에도 같은 협업 방식을 유지했습니다.</p>
       <span class="pres">👥 팀 3인 → 8인 확장</span>
       <div class="prole">역할 · 작업 의뢰서·가이드 기획 · PM</div>
     </div>
@@ -600,7 +600,7 @@
   <div class="sechead rv"><span class="n">§</span><h2>지금의 한계와 다음 스텝</h2><span class="rule"></span></div>
   <div class="honest rv">
     <div class="t">솔직하게,</div>
-    <p>아직 <b>대규모 사용 지표(리텐션·전환)</b>와 큰 조직에서의 협업 경험은 얇습니다. 그래서 다음은 — 단가 에이전트를 팀에 실제 배포해 <b>“찾는 시간이 얼마나 줄었는지”</b>를 측정하고, GoalFlow 초대 사용자의 행동 데이터로 다음 기능을 정하는 것. <b>만드는 것</b>에서 <b>검증하는 것</b>으로 넘어가는 단계입니다.</p>
+    <p>오피스링크를 지인 대상 베타로 운영하며 ‘소속감’에서 출발한 가설을 ‘자기관리’ 문제까지 확장했습니다. 현재는 정식 서비스화를 목표로 사용자 조사와 기능을 보완하고 있습니다. 다음 단계에서는 사용 지표와 피드백을 기준으로 기능 우선순위를 정하며, 대학 구성원의 서로 다른 업무 환경을 AI·클라우드 서비스 요구사항으로 전환하는 역량을 넓히겠습니다.</p>
   </div>
 
 </div>
@@ -609,11 +609,10 @@
 <section class="closing">
   <div class="wrap">
     <span class="mark rv">"</span>
-    <p class="q rv">대학의 교육과 연구가 AI로 다시 설계되는 길목에서,<br>넓혀온 제 땅에 <span class="em">네이버클라우드의 깃발</span>을 꽂고 싶습니다.</p>
+    <p class="q rv">대학 구성원의 업무와 학습 환경을 이해하고,<br><span class="em">현장에서 사용하는 AI·클라우드 서비스</span>로 구체화하겠습니다.</p>
     <div class="sig rv">
       <span><b>이소민</b> · NAVER Cloud 대학 AI·클라우드 비즈니스 지원</span>
-      <a href="mailto:somin.so.win@gmail.com">somin.so.win@gmail.com</a>
-      <span>Instagram <b>@ssominly</b></span>
+      <span>Portfolio · 2026</span>
     </div>
   </div>
 </section>
