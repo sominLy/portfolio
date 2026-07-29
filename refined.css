@@ -15,6 +15,19 @@
 .artifact.single{grid-template-columns:1fr}.artifact.contain img{object-fit:contain;background:white}
 .artifact .artifact-caption{grid-column:1/-1;margin:0;text-align:center}
 .compact-cover h1{font-size:clamp(58px,5.8vw,96px);max-width:17ch}.compact-cover .manual{font-size:clamp(58px,5.5vw,94px)}.compact-cover .sub{font-size:clamp(24px,2.1vw,36px);margin-top:30px;max-width:42ch}.compact-summary{grid-template-columns:.9fr 1.1fr;gap:60px}.compact-summary h2{font-size:clamp(46px,4.1vw,68px);line-height:1.16}
+.concept-cover .inside{position:relative;z-index:1}
+.concept-cover h1{font-size:clamp(58px,5.55vw,92px);line-height:1.12;max-width:19ch}
+.concept-cover .sub{font-size:clamp(22px,1.75vw,31px);line-height:1.5;margin-top:34px;max-width:52ch;color:var(--muted)}
+.concept-index{display:grid;grid-template-columns:.78fr 1.22fr;gap:64px;align-items:center}
+.index-copy h2{font-size:clamp(44px,4.15vw,68px);line-height:1.17;letter-spacing:-.05em;margin:18px 0 0;max-width:13ch}
+.index-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.index-card{display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:start;min-height:146px;padding:20px 22px;border-top:5px solid var(--green);background:#faf8f3}
+.index-card.supporting{border-top-color:#9db2a4}
+.index-no{font-size:16px;line-height:1.3;font-weight:900;color:#9ca59f}
+.index-card b{display:block;margin-bottom:7px;color:#00a84f;font-size:14px}
+.index-card h3{font-size:21px;line-height:1.25;margin:0 0 8px;letter-spacing:-.025em}
+.index-card p{font-size:15px;line-height:1.42;color:var(--muted);margin:0}
+.index-grid.five .index-card:last-child{grid-column:1/-1;min-height:118px}
 .mini-project{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}
 .mini-project h2{font-size:clamp(42px,4.4vw,72px);line-height:1.14;letter-spacing:-.045em;margin:10px 0 25px}
 .mini-project .brief{font-size:20px;line-height:1.55;color:var(--muted)}
@@ -38,6 +51,16 @@ h1,h2,h3,p,li,.intro,.brief,.one-line,.fact span{word-break:keep-all;line-break:
   .num{right:40px;bottom:28px}
   .summary{gap:45px}
   .compact-summary h2{font-size:clamp(40px,3.7vw,54px)}
+  .concept-cover h1{font-size:clamp(50px,5.1vw,70px)}
+  .concept-cover .sub{font-size:clamp(18px,1.7vw,24px);margin-top:22px}
+  .concept-index{gap:36px}
+  .index-copy h2{font-size:clamp(38px,3.8vw,52px)}
+  .index-grid{gap:9px}
+  .index-card{grid-template-columns:30px 1fr;gap:10px;min-height:105px;padding:13px 15px}
+  .index-card b{font-size:12px;margin-bottom:4px}
+  .index-card h3{font-size:17px;margin-bottom:4px}
+  .index-card p{font-size:12px;line-height:1.35}
+  .index-grid.five .index-card:last-child{min-height:88px}
   .experience-list{gap:12px}
   .exp{padding:12px 0}
   .exp h3{font-size:20px}
@@ -73,4 +96,4 @@ h1,h2,h3,p,li,.intro,.brief,.one-line,.fact span{word-break:keep-all;line-break:
   .learning p{font-size:19px;margin-top:25px}
   .closing .manual{font-size:clamp(46px,4.8vw,68px)}
 }
-@media(max-width:760px){.toc.four,.story-grid,.mini-project,.decision{grid-template-columns:1fr}.manual{white-space:normal}}
+@media(max-width:760px){.toc.four,.story-grid,.mini-project,.decision,.concept-index,.index-grid{grid-template-columns:1fr}.index-grid.five .index-card:last-child{grid-column:auto}.concept-cover h1{font-size:45px}.concept-cover .sub{font-size:20px}.index-copy h2{font-size:39px}.index-card{min-height:auto}.manual{white-space:normal}}
