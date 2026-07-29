@@ -12,6 +12,7 @@
 .takeaway{margin-top:26px;border-left:8px solid var(--green);padding:8px 0 8px 25px;font-size:22px;line-height:1.45;font-weight:800}
 .metric-note{font-size:15px;color:var(--muted);margin-top:14px}
 .artifact.single{grid-template-columns:1fr}.artifact.contain img{object-fit:contain;background:white}
+.artifact .artifact-caption{grid-column:1/-1;margin:0;text-align:center}
 .mini-project{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}
 .mini-project h2{font-size:clamp(42px,4.4vw,72px);line-height:1.14;letter-spacing:-.045em;margin:10px 0 25px}
 .mini-project .brief{font-size:20px;line-height:1.55;color:var(--muted)}
